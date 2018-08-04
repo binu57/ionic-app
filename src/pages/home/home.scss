@@ -1,3 +1,26 @@
 page-home {
 
+.wrap{
+    background: url('../assets/imgs/train2.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 2em;
 }
+.wrap_inner_sect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+small{
+    color: #ffffff;
+}
+
+h2{
+    color:#ffffff;
+}
+}
+
+
