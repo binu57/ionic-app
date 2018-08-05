@@ -1,0 +1,18 @@
+
+// Ionicons Icon Font CSS
+// --------------------------
+// Ionicons CSS for Ionic's <ion-icon> element
+// ionicons-icons.scss has the icons and their unicode characters
+
+$merriweather-font-path: $font-path !default;
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local("Merriweather"), local("merriweather"),
+  url("#{$merriweather-font-path}/Merriweather.eot?#iefix") format('embedded-opentype'), 
+  url("#{$merriweather-font-path}/Merriweather.woff") format('woff'), 
+  url("#{$merriweather-font-path}/Merriweather.ttf") format('truetype'), 
+  url("#{$merriweather-font-path}/Merriweather.svg#Merriweather") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
