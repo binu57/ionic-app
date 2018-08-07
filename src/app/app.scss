@@ -20,8 +20,6 @@
 /* Navigation Styles */
 
 
-
-
 /* Navigation Styles End */
 
 /* Global Styles */
@@ -37,18 +35,25 @@ ion-app.md [padding] .scroll-content{
       padding: .375em .75em;
       font-size: 1rem;
       line-height: 1.5;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      border-radius: .25em;
+      color: #ffffff;
+      background-color: transparent;
+      // background-clip: padding-box;
+      border-style: none;
+      font-size: 14px;
+      border-bottom: 1px solid #ffffff;
       margin-bottom: .89em;
       transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+      &::placeholder{
+          font-family: 'Merriweather';
+          font-size:14px;
+          color: #ffffff;
+      }
     }
 
     .btn {
       display: inline-block;
-      margin: 6% 0;
+      margin: 4% 0;
       font-weight: 400;
       text-align: center;
       white-space: nowrap;
@@ -57,9 +62,12 @@ ion-app.md [padding] .scroll-content{
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      border: 1px solid transparent;
-      padding: 15px 8px;
+      background: transparent;
+      border: 1px solid #ffffff;
+      padding: 0.425em;
       width: 100%;
+      color: #ffffff;
+       font-family: 'Merriweather';
       font-size: 1.2em;
       line-height: 1.5;
       border-radius: 2.9em;

@@ -1,11 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <!-- <ion-title>About</ion-title> -->
+<button ion-button icon-only menuToggle class="nav-btn">
+  <ion-icon name="menu"></ion-icon>
+</button>
+<ion-buttons end>
+  <button ion-button icon-only (click)="openModal()">
+    <ion-icon name="options"></ion-icon>
+  </button>
+</ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+<ion-list>
+  <div class="list-wrapper">
+  <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
+    <h2>Amritha Express</h2>
+    <modal [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+      <label>PNR Status:</label>
+      <label>Arrival:</label>
+      <label>Seat Availbility:</label>
+      <label>Weeks:</label>
+    </modal>
+  </button>
+  </div>
+  
+</ion-list>
 </ion-content>

@@ -1,17 +1,37 @@
 page-home {
 
 .wrap{
-    background: url('../assets/imgs/train2.jpg') no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to left top, #d27bf2, #ff7dc3, #ff969c, #ffb98c, #fcd999);
+    // background: url('../assets/imgs/train2.jpg') no-repeat;
+    // background-size: cover;
     height: 100%;
     padding: 2em;
+    .form-group{
+        z-index: 1;
+    }
 }
 .wrap_inner_sect{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     height: 100%;
+    padding: 1em;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top:0;
+        background: inherit;
+        position: absolute;
+        box-shadow: inset 0 0 10px 2000px rgba(255, 255, 255, 0.13);
+        filter: blur(5px) brightness(1.1);
+    }
 }
 
 small{
@@ -20,6 +40,7 @@ small{
 
 h2{
     color:#ffffff;
+    padding: 1.6em 0;
     font-family: 'Raleway-Regular';
 }
 }

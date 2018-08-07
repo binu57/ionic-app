@@ -1,0 +1,19 @@
+modal {
+
+    .expand-wrapper{
+        // height:0;
+        padding: 0.82em 0;
+        transition: 0.3s linear;
+        label{
+            display: block;
+            margin-top: 0.625em ;
+        }
+    }
+     .collapsed {
+       height: 0 !important;
+     }
+ 
+//  .expanded{
+//      height: 200px;
+//  }
+}

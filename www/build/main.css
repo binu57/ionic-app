@@ -3773,6 +3773,13 @@ ion-icon::before {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Merriweather';
+  src: local("Merriweather"), local("merriweather"), url("../assets/fonts/Merriweather.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Merriweather.woff") format("woff"), url("../assets/fonts/Merriweather.ttf") format("truetype"), url("../assets/fonts/Merriweather.svg#Merriweather") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ion-action-sheet {
   left: 0;
   top: 0;
@@ -25650,11 +25657,11 @@ ion-app.md [padding] .scroll-content {
   padding: .375em .75em;
   font-size: 1rem;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25em;
+  color: #ffffff;
+  background-color: transparent;
+  border-style: none;
+  font-size: 14px;
+  border-bottom: 1px solid #ffffff;
   margin-bottom: .89em;
   -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
   transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
@@ -25662,9 +25669,33 @@ ion-app.md [padding] .scroll-content {
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
+.input-group::-webkit-input-placeholder {
+  font-family: 'Merriweather';
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.input-group:-ms-input-placeholder {
+  font-family: 'Merriweather';
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.input-group::-ms-input-placeholder {
+  font-family: 'Merriweather';
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.input-group::placeholder {
+  font-family: 'Merriweather';
+  font-size: 14px;
+  color: #ffffff;
+}
+
 .btn {
   display: inline-block;
-  margin: 6% 0;
+  margin: 4% 0;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
@@ -25673,9 +25704,12 @@ ion-app.md [padding] .scroll-content {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid transparent;
-  padding: 15px 8px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  padding: 0.425em;
   width: 100%;
+  color: #ffffff;
+  font-family: 'Merriweather';
   font-size: 1.2em;
   line-height: 1.5;
   border-radius: 2.9em;
@@ -25685,11 +25719,35 @@ ion-app.md [padding] .scroll-content {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
+modal .expand-wrapper {
+  padding: 0.82em 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+modal .expand-wrapper label {
+  display: block;
+  margin-top: 0.625em;
+}
+
+modal .collapsed {
+  height: 0 !important;
+}
+
+page-about .list-wrapper {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#d27bf2), color-stop(#ff7dc3), color-stop(#ff969c), color-stop(#ffb98c), to(#fcd999));
+  background-image: linear-gradient(to left top, #d27bf2, #ff7dc3, #ff969c, #ffb98c, #fcd999);
+}
+
 page-home .wrap {
-  background: url("../assets/imgs/train2.jpg") no-repeat;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#d27bf2), color-stop(#ff7dc3), color-stop(#ff969c), color-stop(#ffb98c), to(#fcd999));
+  background-image: linear-gradient(to left top, #d27bf2, #ff7dc3, #ff969c, #ffb98c, #fcd999);
   height: 100%;
   padding: 2em;
+}
+
+page-home .wrap .form-group {
+  z-index: 1;
 }
 
 page-home .wrap_inner_sect {
@@ -25697,6 +25755,7 @@ page-home .wrap_inner_sect {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -25710,6 +25769,24 @@ page-home .wrap_inner_sect {
   -ms-flex-line-pack: center;
   align-content: center;
   height: 100%;
+  padding: 1em;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+}
+
+page-home .wrap_inner_sect::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: inherit;
+  position: absolute;
+  -webkit-box-shadow: inset 0 0 10px 2000px rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 0 10px 2000px rgba(255, 255, 255, 0.13);
+  -webkit-filter: blur(5px) brightness(1.1);
+  filter: blur(5px) brightness(1.1);
 }
 
 page-home small {
@@ -25718,5 +25795,6 @@ page-home small {
 
 page-home h2 {
   color: #ffffff;
+  padding: 1.6em 0;
   font-family: 'Raleway-Regular';
 }

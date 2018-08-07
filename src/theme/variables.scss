@@ -23,6 +23,7 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
+// $toolbar-background: #333333;
 
 
 // Named Color Variables
@@ -41,7 +42,6 @@ $colors: (
   dark:       #222
 );
 
-
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -52,7 +52,6 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
 
 
 
@@ -88,4 +87,4 @@ $colors: (
 // @import "noto-sans";
 @import "../assets/fonts/raleway";
 // @import "../assets/fonts/raleway-semibold";
-// @import "../assets/fonts/merriweather";
+@import "../assets/fonts/merriweather";
